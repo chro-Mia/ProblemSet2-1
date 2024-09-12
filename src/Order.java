@@ -1,6 +1,6 @@
 public class Order
 {
-    private int[] orderCodes;
+    private final int[] orderCodes;
     private Menu restaurant;
 
     public Order(Menu restaurantName)

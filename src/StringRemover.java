@@ -11,7 +11,7 @@ public class StringRemover
         System.out.println("Enter a shorter string to remove from the first string: ");
         String string2 = input.nextLine();
 
-        //blah blah blah shut up mr kraut wants me to use indexOf()
+        //blah blah blah shut up, mr kraut wants me to use indexOf()
         while(string1.indexOf(string2) > -1){
 
             System.out.print(string1.substring(0, string1.indexOf(string2)));

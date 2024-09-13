@@ -18,6 +18,11 @@ public class RestaurantRunner
 
         //hilarious variable name
         boolean willThatBeAll = false;
+
+        //string for formatting
+        String other = "";
+
+        //create new order
         Order order = new Order(menu);
 
         //while the customer is still ordering
@@ -25,13 +30,14 @@ public class RestaurantRunner
         //if they're done ordering, calculate their total and ask if they have enough
         //also i cant tell if i should edit the order class or just add the extra logic here?
         while(!willThatBeAll) {
-            System.out.println("What would you like to order?: ");
+            System.out.println("What " + other + "would you like to order?: ");
             int index = input.nextInt();
 
             System.out.println("How many do you want?: ");
             int amount = input.nextInt();
 
             order.add(index, amount);
+            other = "else ";
 
             System.out.println("Will that be all?: ");
             willThatBeAll = input.nextBoolean();

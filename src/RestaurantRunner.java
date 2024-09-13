@@ -23,6 +23,7 @@ public class RestaurantRunner
         //while the customer is still ordering
         //take their input and add their items to the order
         //if they're done ordering, calculate their total and ask if they have enough
+        //also i cant tell if i should edit the order class or just add the extra logic here?
         while(!willThatBeAll) {
             System.out.println("What would you like to order?: ");
             int index = input.nextInt();

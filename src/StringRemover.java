@@ -21,10 +21,10 @@ public class StringRemover
         }
 
         /*
-        step 1: print the substring containing the characters from index 0 to the index of string2
-        step 2: set the pointer to the index of the character after string2
+        step 1: print the substring containing the characters from index 0 to the index of the first instance of string2
+        step 2: set the pointer to the index of the character after the first instance of string2
         step 3: remove a substring of string1 that contains the characters from index 0 to the index of the last
-                character of string2
+                character of the first instance of string2
         step 4: if no string2 is found within string1, print the rest of string1 and exit the loop
         step 5: repeat
         */

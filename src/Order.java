@@ -5,6 +5,7 @@ public class Order
 
     public Order(Menu restaurantName)
     {
+
         restaurant = restaurantName;
         orderCodes = new int[restaurant.getMenuItems().size()];
     }

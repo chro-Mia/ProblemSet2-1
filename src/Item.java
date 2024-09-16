@@ -5,7 +5,7 @@ public class Item
 
     public Item(String itemName, double itemPrice)
     {
-        name = itemName;
+        name =  itemName;
         price = itemPrice;
     }
 

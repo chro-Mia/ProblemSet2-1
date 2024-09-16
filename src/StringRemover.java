@@ -4,13 +4,12 @@ public class StringRemover
     public static void main (String[] args){
 
         int pointer;
-        String string2;
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter a string: ");
         String string1 = input.nextLine();
         System.out.println("Enter a shorter string to remove from the first string: ");
-        string2 = input.nextLine();
+        String string2 = input.nextLine();
 
         //"error" checking loop
         //blah blah blah shut up, mr kraut wants me to use indexOf()

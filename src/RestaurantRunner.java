@@ -42,7 +42,8 @@ public class RestaurantRunner
             System.out.println("Will that be all?: ");
             willThatBeAll = input.nextBoolean();
             if(willThatBeAll){
-                System.out.println("You ordered: " + order);
+                String orderList = order.toString();
+                System.out.println("You ordered:\n" + orderList);
                 System.out.println("Your total is: " + order.getTotal());
 
                 System.out.println("How much money do you have?");
@@ -50,7 +51,7 @@ public class RestaurantRunner
 
                 if(money >= order.getTotal()){
                     System.out.println("Thank you for your purchase!");
-                    System.out.println("Your change is " + (money - order.getTotal()));
+                    System.out.println("Your change is " + (money - order.getTotal()) + " dollars.");
                 }
                 else{
                     System.out.println("You don't have enough money.");

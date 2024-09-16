@@ -42,6 +42,7 @@ public class RestaurantRunner
             System.out.println("Will that be all?: ");
             willThatBeAll = input.nextBoolean();
             if(willThatBeAll){
+                //why
                 String orderList = order.toString();
                 System.out.println("You ordered:\n" + orderList);
                 System.out.println("Your total is: " + order.getTotal());

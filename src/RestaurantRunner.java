@@ -27,10 +27,10 @@ public class RestaurantRunner
         System.out.println(secondMenu);
         System.out.println("Would you like or order from the first or second menu?");
         int menuChoice = input.nextInt();
+        Order order = new Order(menu);
+        Order secondOrder = new Order(secondMenu);
 
         while(!willThatBeAll && menuChoice == 1) {
-
-            Order order = new Order(menu);
 
             System.out.println("What " + other + "would you like to order?: ");
             int index = input.nextInt();
@@ -45,8 +45,9 @@ public class RestaurantRunner
             willThatBeAll = input.nextBoolean();
 
             if(willThatBeAll){
-                //why
+                //explicit toString() call
                 String orderList = order.toString();
+
                 System.out.println("You ordered:\n" + orderList);
                 System.out.println("Your total is: " + order.getTotal());
 
@@ -65,32 +66,31 @@ public class RestaurantRunner
 
         while(!willThatBeAll && menuChoice == 2) {
 
-            Order order = new Order(secondMenu);
-
             System.out.println("What " + other + "would you like to order?: ");
             int index = input.nextInt();
 
             System.out.println("How many do you want?: ");
             int amount = input.nextInt();
 
-            order.add(index, amount);
+            secondOrder.add(index, amount);
             other = "else ";
 
             System.out.println("Will that be all?: ");
             willThatBeAll = input.nextBoolean();
 
             if(willThatBeAll){
-                //why
-                String orderList = order.toString();
+                //explicit toString() call
+                String orderList = secondOrder.toString();
+
                 System.out.println("You ordered:\n" + orderList);
-                System.out.println("Your total is: " + order.getTotal());
+                System.out.println("Your total is: " + secondOrder.getTotal());
 
                 System.out.println("How much money do you have?");
                 double money = input.nextDouble();
 
                 if(money >= order.getTotal()){
                     System.out.println("Thank you for your purchase!");
-                    System.out.println("Your change is " + (money - order.getTotal()) + " dollars.");
+                    System.out.println("Your change is " + (money - secondOrder.getTotal()) + " dollars.");
                 }
                 else{
                     System.out.println("You don't have enough money.");
